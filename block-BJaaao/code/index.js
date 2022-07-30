@@ -3,19 +3,26 @@
 /*
 
 1. Do the following using `alert` function. When you find any square bracket
- replace that to the value of the variable.
+replace that to the value of the variable.
 
 */
 
 let num1 = 21;
 let num2 = 32;
 
-/*
-- Create a variable named `language` and store the value of `JavaScript` in it
-- Alert message saying `I am learning [language]`
-- Alert `The value of num1 is [num1] and the value of num2 is [num2]`
-- Alert `The sum of [num1] and [num2] is [num1 + num1]`
-*/
+
+// - Create a variable named `language` and store the value of `JavaScript` in it
+let language = "JavaScript";
+
+// - Alert message saying `I am learning [language]`
+alert(`I am learning ${language}`);
+
+// - Alert `The value of num1 is [num1] and the value of num2 is [num2]`
+alert(`The value of num1 is ${num1} and the value of num2 is ${num2}`);
+
+// - Alert `The sum of [num1] and [num2] is [num1 + num1]`
+alert (`The sum of ${num1} and ${num2} is ${num1 + num2}`);
+
 
 /*
 2. Do the following using `alert`, `prompt` and `confirm` and `console`
@@ -32,6 +39,14 @@ let num2 = 32;
     Adult: [isAdult]
     Profession: [userProfession]` (it should be in three different lines)
 */
+let userName = prompt("Your usernsme?");
+let userProfession = prompt("Your profession?");
+let isAdult = confirm("Are you adult?");
+alert(`I am ${userName} a ${userProfession}`);
+console.log(`I am ${userName} a ${userProfession}`);
+alert(`userName: ${userName}
+      isAdult: ${isAdult}
+      Profession: ${userProfession}`);
 
 /*
 . Addition using prompt
@@ -43,3 +58,10 @@ let num2 = 32;
   - Log using console.log [numA - numB]
   - Log using console.log [numA * numB]
 */
+let numA = prompt("Enter the first number?");
+let numB = prompt("Enter the second number?");
+alert(Number(numA) + Number(numB));
+alert(numA - numB);
+alert(numA * numB);
+console.log(numA - numB);
+console.log(numA * numB);
