@@ -8,9 +8,9 @@
 */
 let num1 = Number(prompt("Enter a number?"));
 if (num1 % 2 === 0 ) {
-  alert("number is even"); // its alert the message "number is even"
+  alert(`${num1} is even`); // its alert the message "number is even"
 } else {
-  alert ("number is odd"); // its alert the message "number is odd"
+  alert (`${num1} is odd`); // its alert the message "number is odd"
 }
 
 // 2. Write a program to accept two numbers from user using`prompt` and alert the max value.
@@ -18,14 +18,14 @@ if (num1 % 2 === 0 ) {
 let firstNumber = Number(prompt("Enter the first number?"));
 let secondNumber = Number(prompt("Enter the second number?"));
   if (firstNumber > secondNumber) {
-  alert(firstNumber);
+  alert(`${firstNumber} is greater`);
 } else {
-  alert(secondNumber);
+  alert(`${secondNumber} is greater`);
 }
 
 // 3. Convert the above code using`?` terniary operator
 
-(firstNumber > secondNumber) ? alert(firstNumber) : alert(secondNumber) ;
+(firstNumber > secondNumber) ? alert(`${firstNumber} is greater`) : alert(`${secondNumber} is greater`) ;
 
 
 /*
@@ -99,19 +99,24 @@ switch(numOfMonth){
   - `Salary > 50000` tax is 30 %
 
 */
-/* let salary = Number(prompt("Enter your salary?"));
-let inHandSalary ;
-switch(inHandSalary) {
-  case salary <= 20000: inHandSalary = Number(`${salary} - (10/100)*${salary}`);
-    alert (inHandSalary);
-    break; */
-  /* case salary <= 40000: inHandSalary = (`(${salary} - ((20/100)*${salary}))`);
-    alert (inHandSalary);
+let salary = Number(prompt("Enter your salary?"));
+switch(true) {
+  case salary <= 20000: {
+    let inHandSalary = salary - (10/100) * salary;
+    alert (`Your in hand salary is ${inHandSalary}`);
     break;
-  case salary > 50000: inHandSalary = (`(${salary} - ((30/100)*${salary}))`);
-    alert (inHandSalary);
+}
+  case salary <= 40000: { 
+    let inHandSalary = salary - (20/100) * salary;
+    alert (`Your in hand salary is ${inHandSalary}`);
     break;
-} */
+}
+  case salary > 50000: {
+    let inHandSalary = salary - (30/100) * salary;
+    alert (`Your in hand salary is ${inHandSalary}`);
+    break;
+}
+}
 
 
 //  if..else vs switch
