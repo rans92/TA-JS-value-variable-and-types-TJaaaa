@@ -27,28 +27,29 @@ alert(sum);
 
 // 3. Complete the following code to make the output be 0 2 4 6 8 10?
 
-for (let j = 0; j <= 10; j++) { 
-    if (j % 2 === 0)
+for (let j = 0; j <= 10; j = j + 2) { 
     console.log(j);
 }
 
 
 // 4. Print the odd numbers from 9 to 1 (both inclusive) using a for loop.
 for (let i = 9; i > 0; i-- ){
+    if (i % 2 !== 0){
     console.log(i);
+    }
 }
 
 // 5. Concat all the numbers from 5 to 0 (both inclusive) in descending order using a while loop. (543210)
-let sumDescending = 5;
-for (let i = "4"; i >= 0; i--){
+let sumDescending = "";
+for (let i = "5"; i >= 0; i--){
     sumDescending += i;
 }
     console.log(sumDescending);
 
 // 6. Concat all the even numbers from 10 to 0 (both inclusive) in descending order using a while loop. (1086420)
 
-let sumEven = 10;
-for (let i = "8"; i >= 0; i--){
+let sumEven = "";
+for (let i = "10"; i >= 0; i--){
     if (i % 2 === 0){
         sumEven += i;
     }
@@ -69,12 +70,12 @@ Example:
 "hello", -21; // false
 
 */
-let num1 = prompt("Enter a first value?");
-let num2 = prompt("Enter a second value?");
-if (num1 === num2) {
-    alert("true");
-} else if (num1 !== num2){
-    alert("false");
-} else if (num1 === ("true","undefined","null") || num2 === ("true","undefined" ,"null")) {
+let num1 = prompt("Enter a first number?");
+let num2 = prompt("Enter a second number?");
+if ( isNaN(num1) || isNaN(num2) ) {
     alert("Enter a valid value");
+} else if (num1 === num2) {
+    alert("true");
+} else {
+    alert("false")
 }
